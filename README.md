@@ -242,7 +242,7 @@ docker ps
 
 * Sunucumuzun oluştuğu ekranı açalım.
 
-<img src="jenkins10">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins10.png">
 
 * Bu kısımda iki tane IP adresi var. Bunlardan kısaca bahsedelim
 * Internal IP : Makinenizin Google Cloud ağındaki yerel IP adresidir. Bu IP adresi, yalnızca Google Cloud ağındaki diğer
@@ -255,7 +255,7 @@ docker ps
 
 * External IP:8080 adresine girdiğimiz zaman önümüze bir ekran geliyor ve key istiyor.
 
-<img src="jenkins11">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins11.png">
 
 * Bu key'i almak için SSH tekrardan girelim.
 
@@ -271,18 +271,18 @@ docker logs -f containerId
 
 * container'ımızın loglarına bakarsak şifreyi görebiliriz.
 
-<img src="jenkins12">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins12.png">
 
-<img src="jenkins13">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins13.png">
 
-<img src="jenkins14">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins14.png">
 
 * Tamamlanmasını bekleyelim.
 
-<img src="jenkins15">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins15.png">
 
 * Instance Configuration sayfasında direk save and finish kısmına tıklayınız.
 
-<img src="jenkins16">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins16.png">
 
 * Artık yönetim sayfasını açmış oluyoruz.
