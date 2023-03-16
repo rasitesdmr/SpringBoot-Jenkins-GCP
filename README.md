@@ -418,9 +418,9 @@ pipeline {
 
 ## 📌 Webhooks
 
-<img src="jenkins31">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins31.png">
 
-<img src="jenkins32">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins32.png">
 
 * Artık github'a push yaptığınızda jenkins otomatik tetiklenecektir.
 
@@ -429,25 +429,25 @@ pipeline {
 * SSH sunucuya bağlanıyoruz.
 * docker ps çekerek projem ayaktamı ona bakıyorum.
 
-<img src="jenkins33">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins33.png">
 
 * Projemde swagger kullanıyorum. Gelin swagger dan bakalım.
 
-<img src="jenkins34">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins34.png">
 
 * Gördüğümüz gibi sadece bir tane metodum var.
 * Projeme öğrencilerin listesini çekmek için bir metot ekleyip github'a push'layacam ve ardından neler gerçekleşiyor
   onlara bakalım.
 
-<img src="jenkins35">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins35.png">
 
-<img src="jenkins36">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins36.png">
 
-<img src="jenkins37">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins37.png">
 
 * Adımlarım başarıyla tamamlandı.
 * Şimdi swagger kısmına bakalım.
 
-<img src="jenkins38">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins38.png">
 
 * Canlı sunucumdaki proje düzgün bir şekilde güncellendi.
