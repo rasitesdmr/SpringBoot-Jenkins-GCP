@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+
+  postgresql:
+    container_name: db
+    image: postgres
+    ports:
+      - "5433:5432"
+    restart: always
+    environment:
+        POSTGRES_USER : rasit
+        POSTGRES_PASSWORD : rasit
+        POSTGRES_DB : jenkins
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
+    networks:
+      - comment
+
+networks:
+  comment:
+    driver: bridge
