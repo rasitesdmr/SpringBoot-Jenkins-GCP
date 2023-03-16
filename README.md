@@ -309,36 +309,36 @@ docker logs -f containerId
 
 <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins23.png">
 
-<img src="jenkins24">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins24.png">
 
 * Bu alanda jenkinsfile dosyasını kendi repomuzdan alması için bunu seçiyoruz.
 
-<img src="jenkins25">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins25.png">
 
 * Projemizin url'ini veriyoruz. 
 * Daha sonra add kısmına basıp jenkins'i seçiyoruz ve önümüze Jenkins Credentials Provider: Jenkins ekranı geliyor.
 
-<img src="jenkins26">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins26.png">
 
 * Bu kısımda github bilgilerimizi giriyoruz. Önerim password kısmına bir token girmeniz. Bu adımları izleyerek
   yapabilirsiniz.
 * Önce github sayfasına giriş yapalım
 * Ardından ayarlar kısmını açalım ve en alt da developer setting kısmına tıklayalım.
 
-<img src="jenkins27">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins27.png">
 
 * Token kısmından gerkli izinleri vererek oluşturun ve size bir token verecektir, onu password kısmına yapıştırın.
 
-<img src="jenkins28">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins28.png">
 
 * Hangi brach deyseniz onu seçin. Script Path seçin ve kaydet kısmına tıklayın.
 * Son bir adımımız kaldı o da docker hesabını bağlamak.
 
-<img src="jenkins29">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins29.png">
 
 * Bu adımları izleyerek bir credentials oluşturun ve karşınıza şu ekran gelecek.
 
-<img src="jenkins30">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins30.png">
 
 * Aynı github kısmı gibi password kısmını token oluşturarak verin.
 
