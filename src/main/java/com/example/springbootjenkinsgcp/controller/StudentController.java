@@ -23,8 +23,5 @@ public class StudentController {
     ResponseEntity<StudentCreateResponse> createStudent(StudentCreateRequest studentCreateRequest) {
         return new ResponseEntity<>(studentService.createStudent(studentCreateRequest), HttpStatus.CREATED);
     }
-    @GetMapping("/tets")
-    public String test(String mesasge){
-        return mesasge;
-    }
+
 }
