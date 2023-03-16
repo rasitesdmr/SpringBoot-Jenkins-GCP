@@ -103,7 +103,7 @@
 
 ## 📌 SSH AND DOCKER
 
-* <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins7.png">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins7.png">
 
 * Karşımıza böyle bir ekran açılıyor.
 * Şimdi yapmamız gereken sunucunun içinde docker ve docker-compose yüklemek.
