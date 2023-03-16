@@ -438,4 +438,16 @@ pipeline {
 * Gördüğümüz gibi sadece bir tane metodum var.
 * Projeme öğrencilerin listesini çekmek için bir metot ekleyip github'a push'layacam ve ardından neler gerçekleşiyor
   onlara bakalım.
-* 
+
+<img src="jenkins35">
+
+<img src="jenkins36">
+
+<img src="jenkins37">
+
+* Adımlarım başarıyla tamamlandı.
+* Şimdi swagger kısmına bakalım.
+
+<img src="jenkins38">
+
+* Canlı sunucumdaki proje düzgün bir şekilde güncellendi.
