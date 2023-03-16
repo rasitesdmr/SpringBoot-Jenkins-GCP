@@ -72,7 +72,7 @@
 
 * İsterseniz kendi local'ınıza jenkinsi indirebilirsiniz.
 * Ama ben böyle yapmayacağım.
-* Bir tane google cloud hesabımdan ubuntu bir makine kuracağım.
+* Google cloud hesabımdan ubuntu bir makine kuracağım.
 
 ## 📌 Google Cloud
 
