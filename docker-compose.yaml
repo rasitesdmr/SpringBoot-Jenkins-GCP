@@ -1,6 +1,16 @@
 version: '3.8'
 services:
 
+  springboot:
+    image: rasitesdmr1486/springboot-jenkins-gcp:latest
+    container_name: spirngboot-jenkins-gcp
+    restart: always
+    ports:
+      - "9091:9091"
+    networks:
+      - comment
+
+
   postgresql:
     container_name: db
     image: postgres
@@ -8,9 +18,9 @@ services:
       - "5433:5432"
     restart: always
     environment:
-        POSTGRES_USER : rasit
-        POSTGRES_PASSWORD : rasit
-        POSTGRES_DB : jenkins
+      POSTGRES_USER: rasit
+      POSTGRES_PASSWORD: rasit
+      POSTGRES_DB: jenkins
     volumes:
       - ./postgresql:/var/lib/postgresql/data
     networks:
