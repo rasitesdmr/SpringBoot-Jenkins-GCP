@@ -422,6 +422,7 @@ pipeline {
 
 <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins32.png">
 
+* URL kısmı bu şekilde olaması gerek http://IP:8080/github-webhook/
 * Artık github'a push yaptığınızda jenkins otomatik tetiklenecektir.
 
 # 🎯 Projenin Tamamlanması
