@@ -308,3 +308,103 @@ docker logs -f containerId
 <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins22.png">
 
 <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins23.png">
+
+<img src="jenkins24">
+
+* Bu alanda jenkinsfile dosyasını kendi repomuzdan alması için bunu seçiyoruz.
+
+<img src="jenkins25">
+
+* Projemizin url'ini veriyoruz. 
+* Daha sonra add kısmına basıp jenkins'i seçiyoruz ve önümüze Jenkins Credentials Provider: Jenkins ekranı geliyor.
+
+<img src="jenkins26">
+
+* Bu kısımda github bilgilerimizi giriyoruz. Önerim password kısmına bir token girmeniz. Bu adımları izleyerek
+  yapabilirsiniz.
+* Önce github sayfasına giriş yapalım
+* Ardından ayarlar kısmını açalım ve en alt da developer setting kısmına tıklayalım.
+
+<img src="jenkins27">
+
+* Token kısmından gerkli izinleri vererek oluşturun ve size bir token verecektir, onu password kısmına yapıştırın.
+
+<img src="jenkins28">
+
+* Hangi brach deyseniz onu seçin. Script Path seçin ve kaydet kısmına tıklayın.
+* Son bir adımımız kaldı o da docker hesabını bağlamak.
+
+<img src="jenkins29">
+
+* Bu adımları izleyerek bir credentials oluşturun ve karşınıza şu ekran gelecek.
+
+<img src="jenkins30">
+
+* Aynı github kısmı gibi password kısmını token oluşturarak verin.
+
+---
+
+* Jenkins yapılandırma kısmı bitti. Şimdi benim oluşturduğum Jenkinsfile dosyasına bakalım.
+
+---
+
+# 🎯 Jenkinsfile ?
+
+```text
+pipeline {
+    agent any
+    stages {
+        stage('Build Maven') {
+           agent {
+             docker {
+               image 'maven:3.8.5-openjdk-17'
+               args '-v $HOME/.m2:/root/.m2'
+               reuseNode true
+             }
+           }
+           steps {
+                 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'rasitesdmr', url: 'https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP.git']])
+                 sh 'mvn clean package -DskipTests'
+           }
+        }
+        stage("Docker Build Image"){
+            steps{
+                script{
+                    withCredentials([usernameColonPassword(credentialsId: 'docker', variable: 'dockerhub')]) {
+                       sh 'docker build -t rasitesdmr1486/springboot-jenkins-gcp:latest .'
+                    }
+
+                }
+
+            }
+
+        }
+        stage("Docker Push Image"){
+            steps{
+                script{
+                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker', url: "" ){
+                       sh 'docker tag rasitesdmr1486/springboot-jenkins-gcp:latest  rasitesdmr1486/springboot-jenkins-gcp:latest'
+                       sh 'docker push rasitesdmr1486/springboot-jenkins-gcp:latest'
+                    }
+
+                }
+
+            }
+
+        }
+
+        stage("Docker Compose"){
+           steps{
+                 sh 'docker-compose up -d'
+           }
+        }
+
+    }
+}
+
+```
+
+* İlk başta maven image indiriyoruz.
+* Projeyi github'dan çekiyoruz ve build edip jar dosyası haline getiriyoruz.
+* Docker Hub'a push'ladıktan sonra sunucumuzda çalışan container'ımızı yeniden başlatıyoruz.
+* Böylece proje hep güncel kalıyor.
