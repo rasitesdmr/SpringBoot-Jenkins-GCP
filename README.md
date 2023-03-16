@@ -98,6 +98,7 @@
 * Sunucu oluşturma tamamlandı. Şimdi yapmamız gereken SSH ile içine giriyoruz.
 
 <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins6.png">
+
 ---
 
 ## 📌 SSH AND DOCKER
