@@ -29,7 +29,7 @@ pipeline {
         stage("Docker Push Image"){
             steps{
                 script{
-                    withDockerRegistry(credentialsId: 'dockerhub', toolName: 'dockerhub', url: "" ){
+                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker', url: "" ){
                        sh 'docker tag rasitesdmr1486/springboot-jenkins-gcp:latest  rasitesdmr1486/springboot-jenkins-gcp:latest'
                        sh 'docker push rasitesdmr1486/springboot-jenkins-gcp:latest'
                     }
