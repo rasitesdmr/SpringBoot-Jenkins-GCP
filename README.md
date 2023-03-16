@@ -438,4 +438,4 @@ pipeline {
 * Gördüğümüz gibi sadece bir tane metodum var.
 * Projeme öğrencilerin listesini çekmek için bir metot ekleyip github'a push'layacam ve ardından neler gerçekleşiyor
   onlara bakalım.
-
+* 
