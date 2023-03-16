@@ -1,6 +1,6 @@
 # 🎯 Jenkins ?
 
- <img src="jenkins1">
+ <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins1.png">
 
 * Jenkins, Sürekli Entegrasyon (CI / Continuous Integration) ve Sürekli Dağıtım (CD / Continuous Delivery) amacıyla Java
   ile yazılmış açık kaynaklı bir otomasyon aracıdır.
@@ -29,7 +29,7 @@
 * Yani, CI, kod değişikliklerinin entegrasyonunu otomatikleştirirken, CD ise yazılımın sürekli olarak güvenli ve hızlı
   bir şekilde kullanıma sunulmasını sağlar.
 
-<img src="jenkins2">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins2.png">
 
 ## 📌 Pipeline ?
 
@@ -79,16 +79,16 @@
 * İlk önce https://cloud.google.com/ sayfasına girininiz.
 * Compute Engine > VM instances > Create Instance diyerek oluşturmaya başlayalım.
 
-<img src="jenkins3">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins3.png">
 
 * Karşımıza böyle bir sayfa geliyor.
 * Sunucu adınızı giriniz.
 
-<img src="jenkins4">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins4.png">
 
 * Boot Disk bölümünden ubuntu 20.04'ü seçiniz.
 
-<img src="jenkins5">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins5.png">
 
 * Son olarak HTTP isteklerine izin veriyoruz.
 * Create kısmına tıklıyoruz.
@@ -97,12 +97,12 @@
 
 * Sunucu oluşturma tamamlandı. Şimdi yapmamız gereken SSH ile içine giriyoruz.
 
-<img src="jenkins6">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins6.png">
 ---
 
 ## 📌 SSH AND DOCKER
 
-* <img src="jenkins7">
+* <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins7.png">
 
 * Karşımıza böyle bir ekran açılıyor.
 * Şimdi yapmamız gereken sunucunun içinde docker ve docker-compose yüklemek.
@@ -186,7 +186,7 @@ nano docker-compose.yaml
 
 * nano docker-compose.yaml dediğimiz zaman içine yazı yazabileceğimiz bir text sayfası açılır.
 
-<img src="jenkins8">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins8.png">
 
 * İçine jenkins image'nı yazıyoruz.
 * Yazdıktan sonra ctrl + x , y , enter yapıyoruz.
@@ -230,6 +230,6 @@ docker ps
 
 * ps çekerek container durumuna bakabiliriz.
 
-<img src="jenkins9">
+<img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins9.png">
 
 ---
