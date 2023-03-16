@@ -286,3 +286,25 @@ docker logs -f containerId
 <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins16.png">
 
 * Artık yönetim sayfasını açmış oluyoruz.
+
+<img src="jenkins17">
+
+* Şimdi bu kısımda Kontrol Merkezi > Jenkins'i Yönet > Plugin Manager > Available Plugins kısmından Maven
+  Integration, Pipeline Maven Integration , Pipeline Utility Steps ,Docker , Docker Commons , Docker Pipeline ,
+  docker-build-step kısımlarını indirip sunucuya restart atıyoruz.
+
+<img src="jenkins18">
+
+* Bu adımıda tamamladığımıza göre şimdi yeni bir öge oluşturalım.
+
+<img src="jenkins19">
+
+<img src="jenkins20">
+
+* Açılan sayfada şu adımları doldurup seçiyoruz.
+
+<img src="jenkins21">
+
+<img src="jenkins22">
+
+<img src="jenkins23">
