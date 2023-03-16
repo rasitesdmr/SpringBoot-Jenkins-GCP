@@ -408,3 +408,9 @@ pipeline {
 * Projeyi github'dan çekiyoruz ve build edip jar dosyası haline getiriyoruz.
 * Docker Hub'a push'ladıktan sonra sunucumuzda çalışan container'ımızı yeniden başlatıyoruz.
 * Böylece proje hep güncel kalıyor.
+
+---
+
+* Şu kısma 
+
+---
