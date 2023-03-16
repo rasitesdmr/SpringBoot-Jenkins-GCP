@@ -205,6 +205,7 @@ services:
   jenkins:
     image: jenkins/jenkins:lts
     privileged: true
+    restart: always
     user: root
     ports:
       - "8080:8080"
@@ -233,4 +234,55 @@ docker ps
 
 <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins9.png">
 
+* Artık jenkins yükleme kısmını tamamladık. Gelelim jenkins yönetim ekranına.
+
 ---
+
+# 🎯 Jenkins Yönetim ?
+
+* Sunucumuzun oluştuğu ekranı açalım.
+
+<img src="jenkins10">
+
+* Bu kısımda iki tane IP adresi var. Bunlardan kısaca bahsedelim
+* Internal IP : Makinenizin Google Cloud ağındaki yerel IP adresidir. Bu IP adresi, yalnızca Google Cloud ağındaki diğer
+  kaynaklarla iletişim kurmak için kullanılabilir ve internete erişim sağlamak için kullanılamaz.
+* External IP : Makinenizin internet üzerinden erişilebilir genel IP adresidir.Bu IP adresi, makinenize internet
+  üzerinden erişim sağlamak için kullanılır ve internetteki diğer kaynaklarla iletişim kurmak için kullanılır.
+* Bu kısmıda öğrendiğimize göre bir tane browser açalım ve External IP:8080 adresine bağlanalım.
+
+## 📌 Jenkins Yapılandırma
+
+* External IP:8080 adresine girdiğimiz zaman önümüze bir ekran geliyor ve key istiyor.
+
+<img src="jenkins11">
+
+* Bu key'i almak için SSH tekrardan girelim.
+
+```shell
+docker ps 
+```
+
+* docker ps çekelim.
+
+```shell
+docker logs -f containerId 
+```
+
+* container'ımızın loglarına bakarsak şifreyi görebiliriz.
+
+<img src="jenkins12">
+
+<img src="jenkins13">
+
+<img src="jenkins14">
+
+* Tamamlanmasını bekleyelim.
+
+<img src="jenkins15">
+
+* Instance Configuration sayfasında direk save and finish kısmına tıklayınız.
+
+<img src="jenkins16">
+
+* Artık yönetim sayfasını açmış oluyoruz.
