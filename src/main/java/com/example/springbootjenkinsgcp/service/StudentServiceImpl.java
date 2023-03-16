@@ -2,6 +2,7 @@ package com.example.springbootjenkinsgcp.service;
 
 import com.example.springbootjenkinsgcp.dto.request.StudentCreateRequest;
 import com.example.springbootjenkinsgcp.dto.response.StudentCreateResponse;
+import com.example.springbootjenkinsgcp.dto.response.StudentListResponse;
 import com.example.springbootjenkinsgcp.exceptions.StudentNumberAlreadyAvailableException;
 import com.example.springbootjenkinsgcp.exceptions.StudentTcNoAlreadyAvailableException;
 import com.example.springbootjenkinsgcp.model.Student;
@@ -9,6 +10,9 @@ import com.example.springbootjenkinsgcp.repository.StudentRepository;
 import com.example.springbootjenkinsgcp.utils.RegexUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -52,5 +56,23 @@ public class StudentServiceImpl implements StudentService {
 
 
         return studentCreateResponse;
+    }
+
+    @Override
+    public List<StudentListResponse> getStudentList() {
+        List<Student> student = studentRepository.findAll();
+        List<StudentListResponse> studentListResponses = new ArrayList<>();
+
+        for (Student newStudent : student){
+            StudentListResponse studentListResponse = new StudentListResponse();
+            studentListResponse.setId(newStudent.getId());
+            studentListResponse.setFirstName(newStudent.getFirstName());
+            studentListResponse.setLastName(newStudent.getLastName());
+            studentListResponse.setTcNo(newStudent.getTcNo());
+            studentListResponse.setSchoolNo(newStudent.getSchoolNo());
+            studentListResponses.add(studentListResponse);
+        }
+
+        return studentListResponses;
     }
 }

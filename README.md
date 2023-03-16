@@ -315,7 +315,7 @@ docker logs -f containerId
 
 <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins25.png">
 
-* Projemizin url'ini veriyoruz. 
+* Projemizin url'ini veriyoruz.
 * Daha sonra add kısmına basıp jenkins'i seçiyoruz ve önümüze Jenkins Credentials Provider: Jenkins ekranı geliyor.
 
 <img src="https://github.com/rasitesdmr/SpringBoot-Jenkins-GCP/blob/master/image/jenkins26.png">
@@ -411,6 +411,31 @@ pipeline {
 
 ---
 
-* Şu kısma 
+* Şu kısma değinmek istiyorum. Diyelimki projeye birşeyler ekledik ve commit push yaparak github'a gönderdik. Jenkins
+  bunu otomatik yapması için github projenin ayarlar kısmınnda Webhooks açmamız gerekiyor. Gelin bu adımlara bakalım.
 
 ---
+
+## 📌 Webhooks
+
+<img src="jenkins31">
+
+<img src="jenkins32">
+
+* Artık github'a push yaptığınızda jenkins otomatik tetiklenecektir.
+
+# 🎯 Projenin Tamamlanması
+
+* SSH sunucuya bağlanıyoruz.
+* docker ps çekerek projem ayaktamı ona bakıyorum.
+
+<img src="jenkins33">
+
+* Projemde swagger kullanıyorum. Gelin swagger dan bakalım.
+
+<img src="jenkins34">
+
+* Gördüğümüz gibi sadece bir tane metodum var.
+* Projeme öğrencilerin listesini çekmek için bir metot ekleyip github'a push'layacam ve ardından neler gerçekleşiyor
+  onlara bakalım.
+
