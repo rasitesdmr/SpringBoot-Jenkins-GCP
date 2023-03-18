@@ -7,8 +7,14 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
-    boolean existsBySchoolNo(String schoolNo);
+    boolean existsBySchoolNo(String studentNo);
 
     boolean existsByTcNo(String tcNo);
+
+    Student findById(long studentId);
+
+    Student findByTcNo(String studentTC);
+
+    Student findBySchoolNo(String schoolNo);
 
 }
