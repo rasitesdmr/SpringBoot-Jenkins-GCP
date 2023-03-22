@@ -7,10 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ServerWebExchange;
 
 @RestController
@@ -26,12 +23,8 @@ public class LessonController {
     }
 
     @GetMapping("/my-endpoint")
-    public String getEmailFromRequest(ServerWebExchange exchange) {
-        ServerHttpRequest request = exchange.getRequest();
-        String email = request.getHeaders().getFirst("email");
+    public String getEmailFromRequest(@RequestHeader("email") String email) {
 
-        // Perform operations using the email value
-        // ...
 
         return "The email value from request header is: " + email;
     }
