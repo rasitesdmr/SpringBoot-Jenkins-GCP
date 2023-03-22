@@ -22,10 +22,4 @@ public class LessonController {
         return new ResponseEntity<>(lessonService.createLesson(lessonCreateRequest), HttpStatus.CREATED);
     }
 
-    @GetMapping("/my-endpoint")
-    public String getEmailFromRequest(@RequestHeader("email") String email) {
-
-
-        return "The email value from request header is: " + email;
-    }
 }
