@@ -6,9 +6,12 @@ import com.example.springbootjenkinsgcp.service.LessonService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ServerWebExchange;
 
 @RestController
 @RequestMapping("/lesson")
@@ -20,5 +23,16 @@ public class LessonController {
     @PostMapping("/createLesson")
     ResponseEntity<LessonCreateResponse> createLesson(LessonCreateRequest lessonCreateRequest){
         return new ResponseEntity<>(lessonService.createLesson(lessonCreateRequest), HttpStatus.CREATED);
+    }
+
+    @GetMapping("/my-endpoint")
+    public String getEmailFromRequest(ServerWebExchange exchange) {
+        ServerHttpRequest request = exchange.getRequest();
+        String email = request.getHeaders().getFirst("email");
+
+        // Perform operations using the email value
+        // ...
+
+        return "The email value from request header is: " + email;
     }
 }
